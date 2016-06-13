@@ -17,3 +17,8 @@ Route::get('/', function () {
 });
 Route::get('blog','BlogController@index');
 Route::get('blog/{slug}','BlogController@showPost');
+
+//Admin
+Route::get('admin',function () {
+    return redirect('/admin/post');
+});
