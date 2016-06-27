@@ -14,7 +14,8 @@ class CreatePostTagPivot extends Migration
     {
         Schema::create('post_tag_pivot', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->integer('post_id')->unsigned()->index();
+            $table->integer('tag_id')->unsigned()->index();
         });
     }
 
