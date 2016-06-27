@@ -1,0 +1,15 @@
+{
+    "name": "blog",
+    "description": "My awesome blog",
+    "dependencies": {
+	    "jquery": "~2.1.4",
+	    "bootstrap": "~3.3.6"
+	},
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "vendor/bower_dl",
+        "test",
+        "tests"
+    ]
+}
