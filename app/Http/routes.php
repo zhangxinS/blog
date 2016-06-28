@@ -23,9 +23,13 @@ Route::get('admin',function () {
    return redirect('/admin/post');
 });
 Route::group(['namespace' => 'Admin','middleware' => 'auth'],function () {
-   Route::resource('admin/post','PostController');
-   Route::resource('admin/tag','TagController',['except' => 'show']);//排除admin.tag.show方法
-   Route::get('admin/upload','UploadController@index');
+    Route::resource('admin/post','PostController');
+    Route::resource('admin/tag','TagController',['except' => 'show']);//排除admin.tag.show方法
+    Route::get('admin/upload','UploadController@index');
+    Route::post('admin/upload/file','UploadController@uploadFile');
+    Route::delete('admin/upload/file','UploadController@deleteFile');
+    Route::post('admin/upload/folder','UploadController@createFolder');
+    Route::delete('admin/upload/folder','UploadController@deleteFolder');
 });
 
 //登录  登出
