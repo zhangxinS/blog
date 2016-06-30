@@ -11,19 +11,12 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+   {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        $this->call('TagTableSeeder');
         $this->call('PostTableSeeder');
-        // Model::reguard();
-    }
-}
-class PostTableSeeder extends Seeder
-{
-    public function run()
-    {
-        App\Post::truncate();
-        factory(App\Post::class, 20)->create();
+
+        Model::reguard();
     }
 }

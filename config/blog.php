@@ -1,9 +1,14 @@
 <?php
 return [
-		'title' => 'My Blog',
-		'posts_per_page' => 5,
-		'uploads' => [
-			'storage' => 'local',
-			'webpath' => '/uploads',
-		]
+    'name' => "Laravel",
+    'title' => "Laravel",
+    'subtitle' => 'http://nightwish.pub',
+    'description' => 'Laravel学习',
+    'author' => 'NightWish',
+    'page_image' => 'home-bg.jpg',
+    'posts_per_page' => 10,
+    'uploads' => [
+        'storage' => 'local',
+        'webpath' => '/uploads/',
+    ],
 ];
