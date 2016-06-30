@@ -63,6 +63,10 @@ gulp.task("copyfiles", function() {
 
 });
 
+// Copy clean-blog less files
+gulp.src("vendor/bower_dl/clean-blog/less/**")
+    .pipe(gulp.dest("resources/assets/less/clean-blog"));
+
 /**
  * Default gulp is to run this elixir stuff
  */
