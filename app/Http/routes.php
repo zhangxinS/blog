@@ -17,6 +17,9 @@ Route::get('/', function () {
 });
 Route::get('blog','BlogController@index');
 Route::get('blog/{slug}','BlogController@showPost');
+//联系我们
+Route::get('contact','ContactController@showForm');
+Route::post('contact','ContactController@sendContactInfo');
 
 //Admin
 Route::get('admin',function () {
